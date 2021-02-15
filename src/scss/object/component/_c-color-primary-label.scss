@@ -1,0 +1,20 @@
+.c-color-primary-label {
+    @include getTriangle($base-white-taxt-color, bottom, 8, 7);
+    align-items: center;
+    background: $base-purple-background-color;
+    color: $base-white-taxt-color;
+    display: block;
+    font-size: 20px;
+    padding: 0 0 0 10px;
+    justify-content: center;
+    letter-spacing: 3px;
+    max-width: 193px;
+    text-align: center;
+
+    &::before {
+        margin: auto;
+        top: 0;
+        bottom: 0;
+        left: 20px;
+    }
+}

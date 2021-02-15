@@ -1,0 +1,73 @@
+// palette
+$palette-000: #000;
+$palette-FFF: #fff;
+$palette-E9619E: #e9619e;
+$palette-FD6090: #fd6090;
+$palette-F6863C: #f6863c;
+$palette-4C85FF: #4c85ff;
+$palette-00A384: #00a384;
+$palette-8FC31F: #8fc31f;
+$palette-C8C8B9: #c8c8b9;
+$palette-861D3D: #861d3d;
+$palette-F1F1EB: #f1f1eb;
+$palette-969696: #969696;
+$palette-707070: #707070;
+$palette-231815: #231815;
+$palette-787878: #787878;
+$palette-E2E2E2: #e2e2e2;
+$palette-3D3D59: #3d3d59;
+$palette-C7C7B8: #c7c7b8;
+
+$base-black-taxt-color: $palette-000;
+$base-white-taxt-color: $palette-FFF;
+$base-red-taxt-color: $palette-861D3D;
+
+// ボーダー
+$base-purple-border-color: $palette-861D3D;
+$base-gray-border-color: $palette-C8C8B9;
+
+//背景
+$base-cream-background-color: $palette-F1F1EB;
+$base-purple-background-color: $palette-861D3D;
+
+// リンク集
+$link-collection-pink: $palette-FD6090;
+$link-collection-purple: $palette-861D3D;
+
+// リンクカード
+$link-card-purple: $palette-861D3D;
+
+// リンクカード2
+$link-card2-background: $palette-707070;
+
+// リンクカード3
+$link-card3-gray: rgba($palette-231815, .3);
+
+// お知らせ一覧
+$notification-link-color: $palette-861D3D;
+
+// basic-article
+$basic-article-text-color: $palette-231815;
+
+// ページ内ナビゲーション
+$inner-navigation-color: $palette-861D3D;
+$inner-navigation-hover-color: rgba($palette-231815, .3);
+
+// プロフィール
+$profile-color: $palette-861D3D;
+
+// ログイン
+$form-color: $palette-FD6090;
+$form-text-color: $palette-787878;
+
+// Page Up母弾
+$pageup-color: $palette-861D3D;
+
+// ラベル
+$label-new: $palette-E9619E;
+$label-trend: $palette-F6863C;
+$label-news: $palette-4C85FF;
+$label-test: $palette-00A384;
+$label-event: $palette-8FC31F;
+
+$c-headline-color: $palette-861D3D;

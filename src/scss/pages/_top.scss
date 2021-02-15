@@ -1,0 +1,112 @@
+.p-top {
+  background: $base-cream-background-color;
+}
+
+.p-top-inner {
+  padding: 0 10px;
+}
+
+.p-top-block {
+  margin: 53px 0 0;
+}
+
+.p-top-block__head {
+  padding: 0 10px;
+}
+
+.p-top-block__title {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  max-width: $pc-max-width;
+  margin: 0 auto;
+}
+
+.p-top-block__headline {
+  color: $base-red-taxt-color;
+  font-size: 26px;
+  font-weight: normal;
+  letter-spacing: .5px;
+}
+
+.p-top-block__more {
+  @include getTriangle($palette-FFF, right, 5.14, 6);
+
+  font-size: 12px;
+  margin: 15px 0 0;
+  padding: 3px 20px 0 0;
+
+  &::before,
+  &::after {
+    bottom: 0;
+    margin: auto;
+    top: 0;
+  }
+
+  &::before {
+    z-index: 2;
+    right: 4px;
+  }
+
+  &::after {
+    background: $palette-969696;
+    border-radius: 50%;
+    content: "";
+    height: 15px;
+    position: absolute;
+    width: 15px;
+    right: 0;
+  }
+
+  &:focus,
+  &:hover {
+    opacity: .6;
+  }
+}
+
+.p-top-block__content {
+  border-top: 1px solid $base-gray-border-color;
+  padding: 28px 0;
+  margin: 5px 0 0;
+}
+
+.p-top-detail {
+  padding: 50px 0 20px;
+}
+
+.p-top-cards {
+  border-top: 1px solid $base-gray-border-color;
+  padding: 70px 0 0;
+}
+
+.p-top-banner {
+  border-top: 1px solid $base-gray-border-color;
+  display: block;
+  outline: none;
+  padding: 14px 0 3px;
+  position: relative;
+  margin: 56px 0 0;
+  text-align: center;
+
+  &:hover,
+  &:focus {
+    background: $palette-C7C7B8;
+
+    img {
+      opacity: 50%;
+    }
+  }
+}
+
+.p-top-links {
+  border-top: 1px solid $base-gray-border-color;
+  padding: 58px 0 0;
+}
+
+.p-top-sns {
+  padding: 45px 10px 0;
+}
+
+.p-top-pagetop {
+  margin: 37px 0 0;
+}

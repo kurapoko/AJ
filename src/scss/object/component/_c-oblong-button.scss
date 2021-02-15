@@ -1,0 +1,16 @@
+.c-oblong-button {
+    align-items: center;
+    background: $palette-3D3D59;
+    border-radius: 23px;
+    color: $base-white-taxt-color;
+    display: flex;
+    justify-content: center;
+    padding: 12px;
+    width: 100%;
+
+    &:focus,
+    &:hover {
+        background: $form-color;
+        outline: none;
+    }
+}

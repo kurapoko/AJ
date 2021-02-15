@@ -1,0 +1,209 @@
+<% 
+var d = jsonData; 
+var notifications = [
+    {
+        category: 'NEW',
+        category_en: 'new',
+        date: '2020-12-25',
+        text:'「女性下着のデザイナー・パタンナーを目指す方の特別講座」が終了しました。',
+        link: 'http://www.nbf.or.jp/pdf/201211%EF%BD%B5%EF%BD%B0%EF%BE%8C%EF%BE%9F%EF%BE%9D%EF%BD%B6%EF%BE%9A%EF%BD%AF%EF%BD%BC%EF%BE%9E.pdf'
+    },
+    {
+        category: 'お知らせ',
+        category_en: 'news',
+        date: '2020-12-1',
+        text:'2021年 4 月 以降の「本体価格 〇〇円 ＋ 税 」表記がされ た 流通在庫商品 に ついて',
+        link: 'http://www.nbf.or.jp/pdf/2012%20%E6%B5%81%E9%80%9A%E5%9C%A8%E5%BA%AB%E5%95%86%E5%93%81%E3%81%AE%E5%AF%BE%E5%BF%9C.pdf'
+    },
+    {
+        category: 'お知らせ',
+        category_en: 'news',
+        date: '2020-10-14',
+        text:'「本体価格 ○○ 円+税」の値札が貼付されている流通在庫商品の2021年4月以降の対応について',
+        link: 'http://www.nbf.or.jp/pdf/%E3%80%90%E7%A2%BA%E5%AE%9A%E3%80%9120210401%E4%BB%A5%E9%99%8D%E3%81%AE%E4%BE%A1%E6%A0%BC%E8%A1%A8%E8%A8%98%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6.pdf'
+    },
+    {
+        category: 'トレンド',
+        category_en: 'trend',
+        date: '2020-10-10',
+        text:'「ウイズコロナ時代におけるボディファッションの役割」お客様編はこちら',
+        link: 'http://www.nbf.or.jp/with_colona-1.html'
+    },
+
+];
+-%>
+<section class="p-top">
+    <h2 class="c-kv-title c-kv-title--top" style="background-image: url('<%- d.path %>images/index/kv.jpg')">
+        もっと知ってほしい下着のこと
+    </h2>
+    <div class="p-top-detail">
+        <div class="p-top-inner">
+            <div class="p-link-cards">
+                <a href="http://www.nbf.or.jp/knowledge/know_000.html" class="p-link-card" style="background-image: url('<%- d.path %>images/index/card01.jpg')">
+                    <p class="p-link-card__text">
+                        “あんしん”と“信頼”の<br>NBFマーク
+                    </p>
+                </a>
+                <a href="http://www.nbf.or.jp/member/member_001.html" class="p-link-card" style="background-image: url('<%- d.path %>images/index/card02.jpg')">
+                    <p class="p-link-card__text">
+                        協会概要<br>
+                        <span class="p-link-card__en">Association Overview</span>
+                    </p>
+                </a>
+                <a href="./covid19/index.html" class="p-link-card" style="background-image: url('<%- d.path %>images/index/card03.jpg')">
+                    <p class="p-link-card__text">
+                        新型コロナウイルス関連情報<br>
+                        <span class="p-link-card__en">COVID-19 Information</span>
+                    </p>
+                </a>
+            </div>
+        </div>
+
+        <section class="p-top-block">
+            <div class="p-top-block__head">
+                <div class="p-top-block__title">
+                    <h3 class="p-top-block__headline">News & Topics</h3>
+                    <a href="./news/" class="p-top-block__more">一覧はコチラ</a>
+                </div>
+            </div>
+            <div class="p-top-block__content">
+                <div class="p-top-inner">
+                    <ul class="p-notification">
+                        <% for (var i = 0; i < notifications.length; i++) { %>
+                        <li class="p-notification__item">
+                            <span class="p-notification__time"><%- notifications[i].date.replace(/-/g, '.') -%></span>
+                            <span class="c-color-label c-color-label--<%- notifications[i].category_en -%>"><%- notifications[i].category -%></span>
+                            <% if (notifications[i].link) { -%>
+                            <a href="<%- notifications[i].link -%>" class="p-notification__link"><%- notifications[i].text -%></a>
+                            <% } else { -%>
+                            <span class="p-notification__text"><%- notifications[i].text -%></span>
+                            <% } -%>
+                        </li>
+                        <% } %>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <div class="p-top-cards">
+            <div class="p-top-inner">
+                <div class="p-link-cards">
+                    <a href="http://www.nbf.or.jp/member/ginou-hyouka/" class="p-link-card p-link-card--purple" style="background-image: url('<%- d.path %>images/index/card04.jpg')">
+                        <p class="p-link-card__text">
+                            下着類製造職種技能評価試験<br>
+                            <span class="p-link-card__en">Underwear Manufacturing Skill Evaluation Test</span>
+                        </p>
+                    </a>
+                    <a href="http://www.nbf.or.jp/trend/trend_003.html" class="p-link-card p-link-card--purple" style="background-image: url('<%- d.path %>images/index/card05.jpg')">
+                        <p class="p-link-card__text">
+                            インティメイトアドバイザー認定試験<br>
+                            <span class="p-link-card__en">Intimate Advisor Certification Exam</span>
+                        </p>
+                    </a>
+                    <a href="http://www.nbf.or.jp/member/member_1001.html" class="p-link-card p-link-card--purple" style="background-image: url('<%- d.path %>images/index/card06.jpg')">
+                        <p class="p-link-card__text">
+                            業況調査のご報告<br>
+                            <span class="p-link-card__en">Business Condition Survey Report</span>
+                        </p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <a href="http://www.nbf.or.jp/pinkrabbit/index.html" class="p-top-banner">
+            <img src="<%- d.path %>images/index/pinkrabbit.png" alt="NBF公認リポーター Pink Rabbit ランジェリーのあれこれを現場から発信！" width="714" height="84">
+        </a>
+        <div class="p-top-links">
+            <div class="p-top-inner">
+                <div class="p-link-collection">
+                    <section class="p-link-collection__section p-link-collection__section--pink">
+                        <h3 class="p-link-collection__title">最新ランジェリートレンド</h3>
+                        <ul class="p-link-collection__list">
+                            <li class="p-link-collection__item">
+                                <a href="http://www.nbf.or.jp/trend/trend_006.html" class="p-link-collection__link">
+                                    クールビズ・ウォームビズは下着から
+                                </a>
+                            </li>
+                            <li class="p-link-collection__item">
+                                <a href="http://www.nbf.or.jp/trend/trend_004.html" class="p-link-collection__link">
+                                    下着のコラム
+                                </a>
+                            </li>
+                            <li class="p-link-collection__item">
+                                <a href="http://www.nbf.or.jp/trend/trend_001.html" class="p-link-collection__link">
+                                    2月12日はブラジャーの日
+                                </a>
+                            </li>
+                            <li class="p-link-collection__item">
+                                <a href="http://www.nbf.or.jp/trend/trend_005.html" class="p-link-collection__link">
+                                    3月14日ホワイトデー
+                                </a>
+                            </li>
+                        </ul>
+                    </section>
+                    <section class="p-link-collection__section">
+                        <h3 class="p-link-collection__title">下着の知識</h3>
+                        <ul class="p-link-collection__list">
+                            <li class="p-link-collection__item">
+                                <a href="http://www.nbf.or.jp/knowledge/know_001.html" class="p-link-collection__link">
+                                    自分のからだを知る
+                                </a>
+                            </li>
+                            <li class="p-link-collection__item">
+                                <a href="http://www.nbf.or.jp/knowledge/know_101.html" class="p-link-collection__link">
+                                    ボディをきれいに整える下着選び
+                                </a>
+                            </li>
+                            <li class="p-link-collection__item">
+                                <a href="http://www.nbf.or.jp/knowledge/know_201.html" class="p-link-collection__link">
+                                    ボディセンスアップ
+                                </a>
+                            </li>
+                            <li class="p-link-collection__item">
+                                <a href="http://www.nbf.or.jp/knowledge/know_301.html" class="p-link-collection__link">
+                                    下着と上手につきあう
+                                </a>
+                            </li>
+                        </ul>
+                    </section>
+                    <section class="p-link-collection__section">
+                        <h3 class="p-link-collection__title">こんな下着もあります</h3>
+                        <ul class="p-link-collection__list">
+                            <li class="p-link-collection__item">
+                                <a href="http://www.nbf.or.jp/various/vari_001.html" class="p-link-collection__link">
+                                    マタニティ用の下着
+                                </a>
+                            </li>
+                            <li class="p-link-collection__item">
+                                <a href="http://www.nbf.or.jp/various/vari_002.html" class="p-link-collection__link">
+                                    ブライダル用の下着
+                                </a>
+                            </li>
+                            <li class="p-link-collection__item">
+                                <a href="http://www.nbf.or.jp/various/vari_003.html" class="p-link-collection__link">
+                                    乳房を手術された方向けの下着
+                                </a>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+                <div class="p-top-sns">
+                    <ul class="p-sns">
+                        <li class="p-sns__item">
+                            <a href="https://www.facebook.com/pinkrabbitnbf-325447491194876/" rel="noreferrer" target="_blank" class="p-sns__link">
+                                <img src="<%- d.path %>images/index/icon-facebook.png" alt="FaceBook" width="55" height="55">
+                            </a>
+                        </li>
+                        <li class="p-sns__item">
+                            <a href="https://www.instagram.com/pinkrabbitnbf/?hl=ja" rel="noreferrer" target="_blank" class="p-sns__link">
+                                <img src="<%- d.path %>images/index/icon-instagram.png" alt="Instagram" width="55" height="55">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="p-top-pagetop">
+            <%- include('../include/parts/_pageup') %>
+        </div>
+    </div>
+    <%- include('../include/parts/_navigation') %>
+</section>

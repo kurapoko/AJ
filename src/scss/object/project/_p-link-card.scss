@@ -1,0 +1,58 @@
+.p-link-cards {
+    background: transparent;
+    display: flex;
+    max-width: $pc-max-width;
+    margin: 0 auto;
+    overflow: auto;
+}
+
+.p-link-card {
+    align-items: flex-end;
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex: 0 0 350px;
+    height: 270px;
+    margin: 0 0 0 15px;
+    width: 350px;
+
+    &:nth-of-type(3n+1) {
+        margin-left: 0;
+    }
+
+    &:hover,
+    &:focus {
+        opacity: .35;
+        background-size: 110% 110%;
+    }
+
+    &--purple {
+        border: 2px solid $link-card-purple;
+
+        .p-link-card__text {
+            background:  $link-card-purple;
+        }
+    }
+}
+
+.p-link-card__text {
+    align-items: center;
+    background: rgba($palette-000, .6);
+    display: flex;
+    color: $base-white-taxt-color;
+    font-size: 19px;
+    font-weight: bold;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 75px;
+    text-align: center;
+    width: 100%;
+}
+
+.p-link-card__en {
+    font-size: 14px;
+    font-weight: normal;
+    letter-spacing: 0;
+    margin: 5px 0 0;
+}

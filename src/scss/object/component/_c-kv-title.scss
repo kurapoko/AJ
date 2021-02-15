@@ -1,0 +1,18 @@
+.c-kv-title {
+    align-items: center;
+    background-size: cover;
+    color: $base-white-taxt-color;
+    display: flex;
+    font-family: $font-mincho;
+    font-size: 34px;
+    font-weight: normal;
+    height: 200px;
+    justify-content: center;
+    letter-spacing: .1em;
+    text-align: center;
+
+    &--top {
+        font-size: 47px;
+        height: 500px;
+    }
+}

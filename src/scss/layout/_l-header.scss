@@ -1,0 +1,48 @@
+.l-header {
+  padding: 7px 10px;
+  width: 100%;
+}
+
+.l-header-inner {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: $pc-header-width;
+}
+
+.l-header-title {
+  align-items: center;
+  display: flex;
+
+  &:focus,
+  &:hover {
+    opacity: .6;
+  }
+}
+
+.l-header-title__text {
+  margin: 0 0 0 20px;
+}
+
+.l-header-title__headline {
+  align-items: center;
+  color: $base-red-taxt-color;
+  display: flex;
+  font-weight: $font-weight-medium;
+}
+
+.l-header-title__main {
+  font-size: 27px;
+  letter-spacing: -1.75px;
+  margin: 0 0 0 12px;
+}
+
+.l-header-button {
+  max-width: 180px;
+  width: 100%;
+}
+
+.l-wrapper {
+  min-width: 750px;
+}

@@ -1,0 +1,235 @@
+<% 
+d = jsonData;
+var notifications2020 = [
+    {
+        category: 'お知らせ',
+        category_en: 'news',
+        date: '2020-12-25',
+        text:'「女性下着のデザイナー・パタンナーを目指す方の特別講座」が終了しました。',
+        link: 'http://www.nbf.or.jp/pdf/201211%EF%BD%B5%EF%BD%B0%EF%BE%8C%EF%BE%9F%EF%BE%9D%EF%BD%B6%EF%BE%9A%EF%BD%AF%EF%BD%BC%EF%BE%9E.pdf'
+    },
+    {
+        category: 'お知らせ',
+        category_en: 'news',
+        date: '2020-12-1',
+        text:'2021年 4 月 以降の「本体価格 〇〇円 ＋ 税 」表記がされ た 流通在庫商品 に ついて',
+        link: 'http://www.nbf.or.jp/pdf/2012%20%E6%B5%81%E9%80%9A%E5%9C%A8%E5%BA%AB%E5%95%86%E5%93%81%E3%81%AE%E5%AF%BE%E5%BF%9C.pdf'
+    },
+    {
+        category: 'お知らせ',
+        category_en: 'news',
+        date: '2020-10-14',
+        text:'「本体価格 ○○ 円+税」の値札が貼付されている流通在庫商品の2021年4月以降の対応について',
+        link: 'http://www.nbf.or.jp/pdf/%E3%80%90%E7%A2%BA%E5%AE%9A%E3%80%9120210401%E4%BB%A5%E9%99%8D%E3%81%AE%E4%BE%A1%E6%A0%BC%E8%A1%A8%E8%A8%98%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6.pdf'
+    },
+    {
+        category: 'トレンド',
+        category_en: 'trend',
+        date: '2020-10-10',
+        text:'「ウイズコロナ時代におけるボディファッションの役割」お客様編はこちら',
+        link: 'http://www.nbf.or.jp/with_colona-1.html'
+    },
+    {
+        category: 'お知らせ',
+        category_en: 'news',
+        date: '2020-10-14',
+        text:'新型コロナウイルス感染症 拡大防止への対応について',
+        link: 'http://www.nbf.or.jp/covid-19.html'
+    },
+    {
+        category: 'トレンド',
+        category_en: 'trend',
+        date: '2020-10-14',
+        text:'2020秋冬シーズン肌着 ボディに欠かせない定番アイテム',
+        link: 'http://www.nbf.or.jp/trend/trend_006.html'
+    },
+    {
+        category: 'トレンド',
+        category_en: 'trend',
+        date: '2020-10-10',
+        text:'「ウイズコロナ時代におけるボディファッションの役割」企業編はこちら',
+        link: 'http://www.nbf.or.jp/with_colona.html'
+    },
+    {
+        category: '認定試験',
+        category_en: 'test',
+        date: '2020-10-7',
+        text:'第29回インティメイトアドバイザー（IA）認定試験について',
+        link: 'http://www.nbf.or.jp/pdf/IA%E5%8F%97%E9%A8%93%E7%94%B3%E8%BE%BC%E4%B8%AD%E6%AD%A2%E3%81%AE%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B.pdf'
+    },
+    {
+        category: 'お知らせ',
+        category_en: 'news',
+        date: '2020-9-29',
+        text:'「２０１９年業況調査報告」',
+        link: 'http://www.nbf.or.jp/member/member_1001.html'
+    },
+    {
+        category: '認定試験',
+        category_en: 'test',
+        date: '0000-00-00',
+        text:'第２８回インティメイトアドバイザー（IA）認定試験 結果',
+        link: 'http://www.nbf.or.jp/2008/ia_goukaku202008.html'
+    },
+    {
+        category: 'イベント',
+        category_en: 'event',
+        date: '0000-00-00',
+        text:'「2020 パリ国際ランジェリー展」トレンドセミナー＜大阪＞開催のお知らせ',
+        link: 'http://www.nbf.or.jp/pdf/200226%20%E3%83%88%E3%83%AC%E3%83%B3%E3%83%89%E3%82%BB%E3%83%9F%E3%83%8A%E3%83%BC%E9%96%8B%E5%82%AC%E6%A1%88%E5%86%85%20%E5%A4%A7%E9%98%AA.pdf'
+    },
+    {
+        category: 'イベント',
+        category_en: 'event',
+        date: '0000-00-00',
+        text:'「2020 パリ国際ランジェリー展」トレンドセミナー＜東京＞開催のお知らせ',
+        link: 'http://www.nbf.or.jp/pdf/200302%20%E3%83%88%E3%83%AC%E3%83%B3%E3%83%89%E3%82%BB%E3%83%9F%E3%83%8A%E3%83%BC%E9%96%8B%E5%82%AC%E6%A1%88%E5%86%85%20%E6%9D%B1%E4%BA%AC.pdf'
+    },
+];
+var notificationsPast = [
+    {
+        category: 'イベント',
+        category_en: 'event',
+        date: '0000-00-00',
+        text:'「第２回ＮＢＦバレンタイン メンズインナーイベント」報告',
+        link: 'http://www.nbf.or.jp/pdf/%E7%AC%AC2%E5%9B%9E%20NBF%E3%83%90%E3%83%AC%E3%83%B3%E3%82%BF%E3%82%A4%E3%83%B3%20%E3%83%A1%E3%83%B3%E3%82%BA%E3%82%A4%E3%83%B3%E3%83%8A%E3%83%BC%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E5%A0%B1%E5%91%8A%EF%BC%88%E9%80%9F%E5%A0%B1%EF%BC%89.pdf'
+    },
+    {
+        category: 'イベント',
+        category_en: 'event',
+        date: '0000-00-00',
+        text:'「NBFランジェリー展覧会の模様をご覧いただけます。動画はこちら',
+        link: 'https://www.youtube.com/watch?v=orcNV3y3Ljs'
+    },
+    {
+        category: 'お知らせ',
+        category_en: 'news',
+        date: '0000-00-00',
+        text:'２０１６年１２月１日より洗濯表示が変わりました',
+        link: 'http://www.nbf.or.jp/pdf/%EF%BC%92%EF%BC%90%EF%BC%91%EF%BC%96%E5%B9%B4%EF%BC%91%EF%BC%92%E6%9C%88%EF%BC%91%E6%97%A5%E3%82%88%E3%82%8A%E6%B4%97%E6%BF%AF%E8%A1%A8%E7%A4%BA%E3%81%8C%E5%A4%89%E3%82%8F%E3%82%8A%E3%81%BE%E3%81%97%E3%81%9F.pdf'
+    },
+    {
+        category: 'お知らせ',
+        category_en: 'news',
+        date: '0000-00-00',
+        text:'「平成２８年熊本地震」に関するＮＢＦの対応状況を会員ページに掲出いたしました。'
+    },
+    {
+        category: 'お知らせ',
+        category_en: 'news',
+        date: '0000-00-00',
+        text:'ＮＢＦランジェリー展覧会報告',
+        link: 'http://www.nbf.or.jp/pdf/160118%20%E3%83%A9%E3%83%B3%E3%82%B8%E3%82%A7%E3%83%AA%E3%83%BC%E5%B1%95%E8%A6%A7%E4%BC%9A%E5%A0%B1%E5%91%8A%EF%BC%88HP%E7%94%A8%EF%BC%89.pdf'
+    },
+    {
+        category: 'お知らせ',
+        category_en: 'news',
+        date: '0000-00-00',
+        text:'ＮＢＦは日本繊維産業連盟のガイドラインを推進し、安心・安全なものづくりを進めます。',
+        link: 'http://www.nbf.or.jp/pdf/%E7%B9%8A%E7%94%A3%E9%80%A3%E3%82%AC%E3%82%A4%E3%83%89%E3%83%A9%E3%82%A4%E3%83%B3.pdf'
+    },
+    {
+        category: '認定試験',
+        category_en: 'test',
+        date: '0000-00-00',
+        text:'「下着類製造技能評価試験（1・2級）」受験料改定のお知らせ',
+        link: 'http://www.nbf.or.jp/member/ginou-hyouka/'
+    },
+    {
+        category: '認定試験',
+        category_en: 'test',
+        date: '0000-00-00',
+        text:'「下着類製造職種」が、技能実習２号移行対象職種・作業に認定されました」',
+        link: 'http://www.nbf.or.jp/member/ginou-hyouka/'
+    },
+    {
+        category: '認定試験',
+        category_en: 'test',
+        date: '0000-00-00',
+        text:'「下着類製造技能評価試験」実施のお知らせ',
+        link: 'http://www.nbf.or.jp/member/ginou-hyouka/'
+    },
+    {
+        category: 'お知らせ',
+        category_en: 'news',
+        date: '0000-00-00',
+        text:'QTEC製品試験申請手続きページ>を新設いたしました',
+        link: 'http://www.nbf.or.jp/member/member_1501.html'
+    },
+    {
+        category: 'お知らせ',
+        category_en: 'news',
+        date: '0000-00-00',
+        text:'一般社団法人への移行のおしらせ',
+        link: 'http://www.nbf.or.jp/pdf/%E4%B8%80%E8%88%AC%E7%A4%BE%E5%9B%A3%E7%A7%BB%E8%A1%8C%E5%A4%89%E6%9B%B4.pdf'
+    },
+    {
+        category: 'トレンド',
+        category_en: 'trend',
+        date: '0000-00-00',
+        text:'3月14日 ホワイトデー にランジェリーを贈りましょう',
+        link: 'http://www.nbf.or.jp/trend/trend_005.html'
+    },
+    {
+        category: 'お知らせ',
+        category_en: 'news',
+        date: '0000-00-00',
+        text:'東北地方太平洋沖地震の被災者、被災地への支援について',
+        link: 'http://www.nbf.or.jp/pdf/jienkin_20110905.pdf'
+    },
+];
+-%>
+<div class="p-news">
+    <section  class="p-news-container">
+        <div class="p-news-inner">
+            <h1 class="p-news-title">News & Topics<span class="p-news-content__subtitle">一覧</span></h1>
+            <section class="p-news-block">
+                <h2 class="p-news-block__label">
+                    <span class="c-color-primary-label">2020</span>
+                </h2>
+                <div class="p-news-block__content">
+                    <ul class="p-notification p-notification--wide">
+                        <% for (var i = 0; i < notifications2020.length; i++) { %>
+                        <li class="p-notification__item">
+                            <span class="p-notification__time"><%- notifications2020[i].date.replace(/-/g, '.') -%></span>
+                            <span class="c-color-label c-color-label--<%- notifications2020[i].category_en -%>"><%- notifications2020[i].category -%></span>
+                            <% if (notifications2020[i].link) { -%>
+                            <a href="<%- notifications2020[i].link -%>" class="p-notification__link"><%- notifications2020[i].text -%></a>
+                            <% } else { -%>
+                            <span class="p-notification__text"><%- notifications2020[i].text -%></span>
+                            <% } -%>
+                        </li>
+                        <% } %>
+                    </ul>
+                </div>
+            </section>
+        </div>
+        <div class="p-news-inner">
+            <section class="p-news-block">
+                <h2 class="p-news-block__label">
+                    <span class="c-color-primary-label">2019以前</span>
+                </h2>
+                <div class="p-news-block__content">
+                    <ul class="p-notification p-notification--wide">
+                        <% for (var i = 0; i < notificationsPast.length; i++) { %>
+                        <li class="p-notification__item">
+                            <span class="p-notification__time"><%- notificationsPast[i].date.replace(/-/g, '.') -%></span>
+                            <span class="c-color-label c-color-label--<%- notificationsPast[i].category_en -%>"><%- notificationsPast[i].category -%></span>
+                            <% if (notificationsPast[i].link) { -%>
+                            <a href="<%- notificationsPast[i].link -%>" class="p-notification__link"><%- notificationsPast[i].text -%></a>
+                            <% } else { -%>
+                            <span class="p-notification__text"><%- notificationsPast[i].text -%></span>
+                            <% } -%>
+                        </li>
+                        <% } %>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </section>
+    <div class="p-news__pageup">
+        <%- include('../../include/parts/_pageup') %>
+    </div>
+</div>
+
+<%- include('../../include/parts/_navigation') %>

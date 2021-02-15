@@ -1,0 +1,21 @@
+.c-link-buttons {
+    text-align: center;
+}
+
+.c-link-button {
+    align-items: center;
+    background: rgba($palette-000, .6);
+    color: $base-white-taxt-color;
+    display: inline-block;
+    font-size: 20px;
+    margin: 8px;
+    max-width: 380px;
+    padding: 16px;
+    vertical-align: middle;
+    width: 100%;
+
+    &:focus,
+    &:hover {
+        background: $base-purple-background-color;
+    }
+}

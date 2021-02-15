@@ -1,0 +1,26 @@
+.c-color-label {
+    align-items: center;
+    border-radius: 3px;
+    font-size: 13px;
+    display: inline-flex;
+    color: $base-white-taxt-color;
+    padding: 2px;
+    justify-content: center;
+    min-width: 65px;
+
+    &--new {
+        background: $label-new;
+    }
+    &--trend {
+        background: $label-trend;
+    }
+    &--news {
+        background: $label-news;
+    }
+    &--test {
+        background: $label-test;
+    }
+    &--event {
+        background: $label-event;
+    }
+}

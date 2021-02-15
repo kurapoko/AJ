@@ -1,0 +1,32 @@
+<% var d = jsonData; -%>
+<header class="l-header">
+    <div class="l-header-inner">
+        <a href="<%- d.path %>" class="l-header-title">
+            <div class="l-header-title__icon">
+                <img src="<%- d.path %>images/common/icon-ci.svg" alt="Nihon Body Fashion Association" width="66" height="73">
+            </div>
+            <div class="l-header-title__text">
+                <% if (d.top) { -%>
+                    <h1 class="l-header-title__headline">
+                        <span class="l-header-title__sub">一般社団法人</span>
+                        <span class="l-header-title__main">日本ボディファッション協会</span>
+                    </h1>
+                <% } else { -%>
+                    <div class="l-header-title__headline">
+                        <span class="l-header-title__sub">一般社団法人</span>
+                        <span class="l-header-title__main">日本ボディファッション協会</span>
+                    </div>
+                <% } -%>
+                <div class="l-header-title__catch">Nihon Body Fashion Association</div>
+            </div>
+        </a>
+        <% if (!d.hideLoginButton) { -%>
+        <div class="l-header-button">
+            <a href="<%- d.path %>login/" class="c-primary-button">
+                <svg class="c-primary-button__icon" role="img" aria-label="会員ログイン" width="20" height="20"><use xlink:href="#svg-person-circle" /></svg>
+                会員ログイン
+            </a>
+        </div>
+        <% } -%>
+    </div>
+</header>

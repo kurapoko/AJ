@@ -1,0 +1,35 @@
+.c-primary-button {
+    @include getTriangle($palette-FFF, right, 7, 8);
+    background: $palette-FD6090;
+    border-radius: 3px;
+    color: $base-white-taxt-color;
+    display: inline-block;
+    font-size: 14px;
+    padding: 6px 20px 6px 30px;
+    text-align: center;
+    width: 100%;
+
+    &::before {
+        bottom: 0;
+        margin: auto;
+        right: 5px;
+        top: 0;
+    }
+
+    &:focus,
+    &:hover {
+        background: $palette-861D3D;
+        outline: none;
+    }
+}
+
+.c-primary-button__icon {
+    bottom: 0;
+    fill: $palette-E2E2E2;
+    isolation: isolate;
+    left: 5px;
+    margin: auto;
+    mix-blend-mode: screen;
+    position: absolute;
+    top: 0;
+}
